@@ -1,4 +1,4 @@
-import { check, error, readProjectFile, text, verdict, z } from '@cairul/plugin-kit';
+import { check, error, readProjectFile, text, verdict, z } from '@cairul/pdk';
 
 const thresholds = z.record(z.string(), z.object({ ok: z.boolean() }));
 const reportSchema = z.object({ metrics: z.record(z.string(), z.object({ thresholds: thresholds.optional() })) });
